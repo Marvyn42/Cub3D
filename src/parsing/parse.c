@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:31:01 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 18:31:03 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 18:47:28 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,10 @@ void		parse_data(char *line, t_game *game, int *data_parsed)
 	{
 		words = ft_split_charset(line, ft_get_whitespaces());
 		index = find_elem(words, tab);
-		if ((index >= 0 && !(data_parsed[index] = tab_f[index](game,
-			words, index)))
-			|| (index == -1 && words[0]))
+		if (data_parsed[index] ||
+			(index >= 0 && !(data_parsed[index] = tab_f[index](game,
+			words, index)))||
+			(index == -1 && words[0]))
 		{
 			free_split(words);
 			ft_free(line);

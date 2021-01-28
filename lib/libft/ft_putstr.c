@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:12:10 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 18:34:23 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 16:01:34 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putstr(char *s)
 {
-	write(1, &s, ft_strlen(s));
+	write(1, s, ft_strlen(s));
 }

@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:32:09 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 19:55:34 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 15:52:37 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,13 @@
 
 int			fill_resolution(t_game *game, char **words, int index)
 {
-	int	tmp;
-	int	total;
-
-	tmp = 0;
 	(void)index;
 	if (!words[2])
 		return (0);
 	game->res.x = ft_atoi(words[1]);
 	game->res.y = ft_atoi(words[2]);
-	total = game->res.x * game->res.y;
 	if (game->res.y <= 0 || game->res.x <= 0)
 		return (0);
-	game->speed = 1;
-	while (tmp < total)
-	{
-		tmp += 200000;
-		game->speed += 1;
-	}
-	tmp = 0;
-	while (tmp < total)
-	{
-		tmp += 333333;
-		game->rota_speed += 1;
-	}
 	return (1);
 }
 

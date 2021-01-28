@@ -6,11 +6,29 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:32:27 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 21:32:54 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 16:04:22 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+void	fix_speed(t_game *game)
+{
+	int	tmp;
+
+	tmp = 0;
+	while (tmp <= (game->res.x * game->res.y))
+	{
+		tmp += 200000;
+		game->speed += 1;
+	}
+	tmp = 0;
+	while (tmp <= (game->res.x * game->res.y))
+	{
+		tmp += 333333;
+		game->rota_speed += 1;
+	}
+}
 
 int		forward(t_game *game)
 {

@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:33:12 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 18:33:13 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 18:54:34 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	init_dda(t_game *game)
 	game->dda.line = (t_dpos){0.0, 0.0};
 	game->dda.cos_angle = 0.0;
 	game->dda.dist_t = 0.0;
+	fix_speed(game);
 }
 
 int		check_cub(t_game *game, const char *file)

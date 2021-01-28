@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 21:10:24 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 19:41:39 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 17:32:47 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -193,9 +193,6 @@ typedef struct	s_calc_sprite
 	unsigned int color;
 }				t_calc_sprite;
 
-
-
-
 /*
 **	Window
 */
@@ -213,7 +210,7 @@ int				minimise_hook(t_game *game);
 **	Image
 */
 t_img			init_img(t_game *game);
-void			global_img(t_game *game);
+void			global_img(t_game *game, int argc);
 
 /*
 **	Parse
@@ -269,6 +266,7 @@ void			draw_columns(t_game *game);
 /*
 **	Move player
 */
+void			fix_speed(t_game *game);
 int				forward(t_game *game);
 int				backward(t_game *game);
 int				left(t_game *game);
@@ -327,8 +325,6 @@ void    disp_square(int x, int y, int color, t_game *game, int width);
 void    ft_disp_minimap(t_game *game);
 void    disp_square(int x, int y, int color, t_game *game, int width);
 void    draw_line(int x0, int y0, int x1, int y1, int color, t_game *game);
-
-
 
 /*
 **	Sprite

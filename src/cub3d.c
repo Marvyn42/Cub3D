@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 18:31:32 by mamaquig          #+#    #+#             */
-/*   Updated: 2021/01/26 18:31:33 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 15:39:48 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main(int argc, char *argv[])
 	{
 		game.mlx.id = mlx_init();
 		global_parse(argv[1], &game);
-		global_img(&game);
+		global_img(&game, argc);
 		global_win(&game);
 		global_event(&game);
 		mlx_loop(game.mlx.id);
@@ -31,7 +31,7 @@ int		main(int argc, char *argv[])
 	{
 		game.mlx.id = mlx_init();
 		global_parse(argv[1], &game);
-		global_img(&game);
+		global_img(&game, argc);
 		ft_create_bmp(&game);
 		free_game(&game);
 		exit(EXIT_SUCCESS);

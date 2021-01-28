@@ -6,7 +6,7 @@
 /*   By: mamaquig <mamaquig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/19 18:03:14 by agautier          #+#    #+#             */
-/*   Updated: 2020/11/09 17:43:49 by mamaquig         ###   ########.fr       */
+/*   Updated: 2021/01/28 17:20:53 by mamaquig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static int	fill_tab(char ***tab, int *words_len, char *str, char *charset)
 	word_count = ft_word_count(str, charset);
 	while (d1 < word_count && str[i_str])
 	{
-		if (!((*tab)[d1] = malloc((words_len[d1] + 1) * sizeof(char))))
+		if (!((*tab)[d1] = malloc((words_len[d1] + 1) * sizeof(char) + 1)))
 			return (0);
 		while (ft_find_sep(str[i_str], charset))
 			i_str++;
